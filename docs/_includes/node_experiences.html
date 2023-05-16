@@ -1,1 +1,17 @@
-Hello world
+<div class="accordion my-3" id="nodesExperiencesAccordion">
+    {% for experience in site.docs.topics.nodes-experiences %}
+    <div class="card">
+      <div class="card-header collapsed" id="{{ experience.node }}" data-toggle="collapse" data-target="#collapse{{experience.node}}" aria-expanded="false" aria-controls="collapse{{experience.node}}">
+        <h5 class="mb-0">
+          {{ experience.title }}
+        </h5>
+      </div>
+  
+      <div id="collapse{{experience.node}}" class="collapse" aria-labelledby="{{experience.node}}">
+        <div class="card-body">
+          {{ experience.Content }}  
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
